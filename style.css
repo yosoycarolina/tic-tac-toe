@@ -1,0 +1,325 @@
+/* =========================
+   TIC TAC TOE V3
+   Main Styles
+========================= */
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #667eea,
+            #764ba2
+        );
+
+    color: white;
+
+}
+
+
+
+/* Main container */
+
+.game-container {
+
+    width: min(95%, 500px);
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.25);
+
+    text-align: center;
+
+}
+
+
+
+/* Header */
+
+.game-header h1 {
+
+    margin-bottom: 10px;
+
+    font-size: 3rem;
+
+}
+
+
+.game-header p {
+
+    opacity: 0.8;
+
+}
+
+
+
+/* Menu */
+
+
+.menu {
+
+    margin-top: 25px;
+
+}
+
+
+.menu label {
+
+    display:block;
+
+    margin-bottom:8px;
+
+}
+
+
+
+input {
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+    font-size:16px;
+
+}
+
+
+
+button {
+
+    width:100%;
+
+    padding:14px;
+
+    margin:8px 0;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+
+}
+
+
+
+button:hover {
+
+    transform:scale(1.03);
+
+}
+
+
+
+/* Game buttons */
+
+#humanMode {
+
+    background:#4ade80;
+
+}
+
+
+#computerMode {
+
+    background:#60a5fa;
+
+}
+
+
+#startButton {
+
+    background:#facc15;
+
+}
+
+
+
+#restartButton {
+
+    background:#f87171;
+
+}
+
+
+
+/* Board */
+
+
+.game-area {
+
+    margin-top:30px;
+
+}
+
+
+
+.board {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+
+    width:100%;
+
+    aspect-ratio:1;
+
+    margin:20px auto;
+
+}
+
+
+
+.cell {
+
+    background:white;
+
+    color:#333;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:3.5rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+
+.cell:hover {
+
+    background:#f3f4f6;
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* Score */
+
+
+.score {
+
+    margin-top:30px;
+
+    background:rgba(0,0,0,0.15);
+
+    padding:15px;
+
+    border-radius:15px;
+
+}
+
+
+.score p {
+
+    margin:8px;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:500px){
+
+
+    .game-container{
+
+        padding:20px;
+
+    }
+
+
+    .game-header h1{
+
+        font-size:2.2rem;
+
+    }
+
+
+    .cell{
+
+        font-size:2.5rem;
+
+    }
+
+}
+.cell.winner {
+
+    background: #86efac;
+
+    animation: winnerPulse .9s ease;
+
+}
+
+
+
+@keyframes winnerPulse {
+
+    from {
+
+        transform: scale(1);
+
+    }
+
+
+    to {
+
+        transform: scale(1.08);
+
+    }
+
+}
+.cell.winner {
+
+    background: #86efac;
+
+}
